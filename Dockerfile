@@ -9,7 +9,7 @@ RUN apt-get update && \
         curl gunicorn3
 
 WORKDIR /app
-COPY pyproject.toml poetry.lock /app/
+COPY pyproject.toml /app/
 RUN poetry install --without dev
 
 RUN set -xe \
